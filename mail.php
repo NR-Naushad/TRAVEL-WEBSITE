@@ -11,15 +11,15 @@ function send_mail($to,$subject,$message){
 	try {
           $mail->SMTPDebug = 0;   
           $mail->isSMTP(); 
-          $mail->Host = 'smtp.zoho.com'; 
+          $mail->Host = 'Nr.Travel.com'; 
           $mail->SMTPAuth = true;
-          $mail->Username = "support@romideliveries.com"; 
-          $mail->Password = "romin0p455w0rd";
+          $mail->Username = "support@travel.com"; 
+          $mail->Password = "travel0p455w0rd";
           $mail->SMTPSecure = 'ssl';  
           $mail->Port = 465; 
-          $mail->setFrom("support@romideliveries.com", "ROMI Deliveries");
+          $mail->setFrom("support@travel.com", "Travel Point");
           $mail->addAddress($to);
-          $mail->addReplyTo("support@romideliveries.com","ROMI Deliveries");
+          $mail->addReplyTo("support@travel.com","Travel Point");
           $mail->isHTML(true); 
           $mail->Subject = $subject;
           $mail->Body    = $message;
